@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <title>안녕, 오지</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/9448297042.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            box-sizing: border-box;
+            font-family: "NanumSquare";
+            list-style: none;
+        }
+
+        a {
+            color: black;
+        }
+
+        header {
+            width: 100vw;
+            max-width: 100%;
+            height: 70px;
+            background: #ebdcbf;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0;
+            z-index: 99999;
+        }
+
+        header input[type=search] {
+            width: 200px;
+            height: 16px;
+            background: #ebdcbf;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 1px solid black;
+            margin-top: 31px;
+        }
+
+        header input:focus {
+            outline: none;
+        }
+
+        header a img {
+            height: 70px;
+            float: left;
+        }
+
+        .header_a {
+            float: right;
+            /* border: 1px solid red; */
+            margin-top: 23.2px;
+            margin-right: 20px;
+        }
+
+        header ul {
+            /* border: 1px solid red; */
+            float: right;
+            margin-top: 23.2px;
+            margin-right: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            display: none;
+            text-align: center;
+            color: #eaeaea;
+            background: gray;
+        }
+
+        .header_a:hover~ul {
+            display: block;
+        }
+
+        header ul li {
+            margin-bottom: 5px;
+        }
+
+        .sect_we_are {
+            margin-top: 150px;
+            /* border: 1px solid red; */
+        }
+
+        .we_are_wrapper {
+            width: 1100px;
+            /* border: 1px solid blue; */
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .we_are_left {
+            border-top: 1px solid gray;
+            width: 400px;
+            float: left;
+        }
+
+        .we_are_left i {
+            /* border: 1px solid red; */
+            font-size: 20em;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        .we_are_right {
+            width: 700px;
+            float: right;
+            /* border: 1px solid blue; */
+        }
+
+        .we_are_right h1 {
+            margin-bottom: 5px;
+        }
+
+        .we_are_right p {
+            text-align: justify;
+            margin-bottom: 5px;
+        }
+
+        .stair1 {
+            padding-left: 5px;
+            width: 233.3333px;
+            border-left: 1px solid gray;
+            border-bottom: 1px solid gray;
+        }
+
+        .stair1:hover .span_h1 {
+            background: red;
+        }
+
+        .stair1:hover .span_h1+span::after {
+            content: "";
+            display: inline-block;
+            clear: both;
+            width: 20px;
+            height: 5px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            border-left: 5px solid #5e6675;
+            border-bottom: 5px solid #5e6675;
+            border-top: 5px solid transparent;
+            border-right: 5px solid transparent;
+            transform: rotate(-45deg);
+        }
+
+        .stair1:hover .span1 {
+            background: yellowgreen;
+        }
+
+        .stair1:hover .span2 {
+            background: burlywood;
+        }
+
+        .stair1:hover .span3 {
+            background: chartreuse;
+        }
+
+        .stair1:hover .span4 {
+            background: rebeccapurple;
+        }
+
+        .stair1:hover .span5 {
+            background: khaki;
+        }
+
+        .stair2 {
+            padding-left: 5px;
+            margin-left: 233.3334px;
+            width: 233.3333px;
+            border-left: 1px solid gray;
+            border-bottom: 1px solid gray;
+            margin-top: -0.5px;
+        }
+
+        .stair2:hover .span_h1 {
+            background: red;
+        }
+
+        .stair2:hover .span_h1+span::after {
+            content: "";
+            display: inline-block;
+            clear: both;
+            width: 20px;
+            height: 5px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            border-left: 5px solid #5e6675;
+            border-bottom: 5px solid #5e6675;
+            border-top: 5px solid transparent;
+            border-right: 5px solid transparent;
+            transform: rotate(-45deg);
+        }
+
+        .stair2:hover .span1 {
+            background: yellowgreen;
+        }
+
+        .stair2:hover .span2 {
+            background: burlywood;
+        }
+
+        .stair2:hover .span3 {
+            background: chartreuse;
+        }
+
+        .stair2:hover .span4 {
+            background: rebeccapurple;
+        }
+
+        .stair2:hover .span5 {
+            background: khaki;
+        }
+
+        .stair3 {
+            padding-left: 5px;
+            margin-left: 466.6668px;
+            width: 233.3333px;
+            border-left: 1px solid gray;
+            border-bottom: 1px solid gray;
+            margin-top: -1px;
+        }
+
+        .stair3:hover .span_h1 {
+            background: red;
+        }
+
+        .stair3:hover .span_h1+span::after {
+            content: "";
+            display: inline-block;
+            clear: both;
+            width: 20px;
+            height: 5px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            border-left: 5px solid #5e6675;
+            border-bottom: 5px solid #5e6675;
+            border-top: 5px solid transparent;
+            border-right: 5px solid transparent;
+            transform: rotate(-45deg);
+        }
+
+        .stair3:hover .span1 {
+            background: yellowgreen;
+        }
+
+        .stair3:hover .span2 {
+            background: burlywood;
+        }
+
+        .stair3:hover .span3 {
+            background: chartreuse;
+        }
+
+        .stair3:hover .span4 {
+            background: rebeccapurple;
+        }
+
+        .stair3:hover .span5 {
+            background: khaki;
+        }
+
+        .second_part {
+            margin-top: 200px;
+        }
+
+        .second_part_wrapper {
+            width: 1100px;
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+            /* border: 1px solid red; */
+        }
+
+        .second_part_right {
+            border-top: 1px solid gray;
+            width: 400px;
+            float: right;
+        }
+
+        .second_part_right i {
+            font-size: 20em;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translate(0, -50%);
+        }
+
+        .second_part_left {
+            width: 700px;
+            float: left;
+        }
+
+        .second_part_right h1 {
+            margin-bottom: 5px;
+            float: right;
+        }
+
+        .second_part_left p {
+            text-align: justify;
+            margin-bottom: 5px;
+        }
+
+        .second_part_left h1 {
+            text-align: right;
+        }
+
+        .stair4 {
+            padding-right: 5px;
+            margin-left: 466.6668px;
+            width: 233.3333px;
+            border-right: 1px solid gray;
+            border-bottom: 1px solid gray;
+        }
+
+        .stair4:hover .span_h1 {
+            background: red;
+        }
+
+        .stair4:hover h1::before {
+            content: "";
+            display: inline-block;
+            clear: both;
+            width: 20px;
+            height: 5px;
+            margin-bottom: 5px;
+            margin-right: 5px;
+            border-left: 5px solid #5e6675;
+            border-bottom: 5px solid #5e6675;
+            border-top: 5px solid transparent;
+            border-right: 5px solid transparent;
+            transform: rotate(-45deg);
+        }
+
+        .stair4:hover .span1 {
+            background: yellowgreen;
+        }
+
+        .stair4:hover .span2 {
+            background: burlywood;
+        }
+
+        .stair4:hover .span3 {
+            background: chartreuse;
+        }
+
+        .stair4:hover .span4 {
+            background: rebeccapurple;
+        }
+
+        .stair4:hover .span5 {
+            background: khaki;
+        }
+
+        .stair5 {
+            padding-right: 5px;
+            margin-left: 233.3334px;
+            width: 233.3333px;
+            border-right: 1px solid gray;
+            border-bottom: 1px solid gray;
+            margin-top: -0.5px;
+        }
+
+        .stair5:hover .span_h1 {
+            background: red;
+        }
+
+        .stair5:hover h1::before {
+            content: "";
+            display: inline-block;
+            clear: both;
+            width: 20px;
+            height: 5px;
+            margin-bottom: 5px;
+            margin-right: 5px;
+            border-left: 5px solid #5e6675;
+            border-bottom: 5px solid #5e6675;
+            border-top: 5px solid transparent;
+            border-right: 5px solid transparent;
+            transform: rotate(-45deg);
+        }
+
+        .stair5:hover .span1 {
+            background: yellowgreen;
+        }
+
+        .stair5:hover .span2 {
+            background: burlywood;
+        }
+
+        .stair5:hover .span3 {
+            background: chartreuse;
+        }
+
+        .stair5:hover .span4 {
+            background: rebeccapurple;
+        }
+
+        .stair5:hover .span5 {
+            background: khaki;
+        }
+
+        .stair6 {
+            padding-right: 5px;
+            width: 233.3333px;
+            border-right: 1px solid gray;
+            border-bottom: 1px solid gray;
+            margin-top: -1px;
+        }
+
+        .stair6:hover .span_h1 {
+            background: red;
+        }
+
+        .stair6:hover h1::before {
+            content: "";
+            display: inline-block;
+            clear: both;
+            width: 20px;
+            height: 5px;
+            margin-bottom: 5px;
+            margin-right: 5px;
+            border-left: 5px solid #5e6675;
+            border-bottom: 5px solid #5e6675;
+            border-top: 5px solid transparent;
+            border-right: 5px solid transparent;
+            transform: rotate(-45deg);
+        }
+
+        .stair6:hover .span1 {
+            background: yellowgreen;
+        }
+
+        .stair6:hover .span2 {
+            background: burlywood;
+        }
+
+        .stair6:hover .span3 {
+            background: chartreuse;
+        }
+
+        .stair6:hover .span4 {
+            background: rebeccapurple;
+        }
+
+        .stair6:hover .span5 {
+            background: khaki;
+        }
+
+        .third_part {
+            margin-top: 200px;
+            /* border: 1px solid red; */
+        }
+
+        .third_part_wrapper {
+            width: 1100px;
+            /* border: 1px solid blue; */
+            margin: 0 auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .third_part_left {
+            border-top: 1px solid gray;
+            width: 400px;
+            float: left;
+        }
+
+        .third_part_left i {
+            /* border: 1px solid red; */
+            font-size: 20em;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+
+        .third_part_right {
+            width: 700px;
+            float: right;
+        }
+
+        .third_part_right h1 {
+            margin-bottom: 5px;
+        }
+
+        .third_part_right p {
+            text-align: justify;
+            margin-bottom: 5px;
+        }
+
+        .stair7 {
+            padding-left: 5px;
+            width: 233.3333px;
+            border-left: 1px solid gray;
+            border-bottom: 1px solid gray;
+        }
+
+        .stair7:hover .span_h1 {
+            background: red;
+        }
+
+        .stair7:hover .span_h1+span::after {
+            content: "";
+            display: inline-block;
+            clear: both;
+            width: 20px;
+            height: 5px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            border-left: 5px solid #5e6675;
+            border-bottom: 5px solid #5e6675;
+            border-top: 5px solid transparent;
+            border-right: 5px solid transparent;
+            transform: rotate(-45deg);
+        }
+
+        .stair7:hover .span1 {
+            background: yellowgreen;
+        }
+
+        .stair7:hover .span2 {
+            background: burlywood;
+        }
+
+        .stair7:hover .span3 {
+            background: chartreuse;
+        }
+
+        .stair7:hover .span4 {
+            background: rebeccapurple;
+        }
+
+        .stair7:hover .span5 {
+            background: khaki;
+        }
+
+        .stair8 {
+            padding-left: 5px;
+            margin-left: 233.3334px;
+            width: 233.3333px;
+            border-left: 1px solid gray;
+            border-bottom: 1px solid gray;
+            margin-top: -0.5px;
+        }
+
+        .stair8:hover .span_h1 {
+            background: red;
+        }
+
+        .stair8:hover .span_h1+span::after {
+            content: "";
+            display: inline-block;
+            clear: both;
+            width: 20px;
+            height: 5px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            border-left: 5px solid #5e6675;
+            border-bottom: 5px solid #5e6675;
+            border-top: 5px solid transparent;
+            border-right: 5px solid transparent;
+            transform: rotate(-45deg);
+        }
+
+        .stair8:hover .span1 {
+            background: yellowgreen;
+        }
+
+        .stair8:hover .span2 {
+            background: burlywood;
+        }
+
+        .stair8:hover .span3 {
+            background: chartreuse;
+        }
+
+        .stair8:hover .span4 {
+            background: rebeccapurple;
+        }
+
+        .stair8:hover .span5 {
+            background: khaki;
+        }
+
+        .stair9 {
+            padding-left: 5px;
+            margin-left: 466.6668px;
+            width: 233.3333px;
+            border-left: 1px solid gray;
+            border-bottom: 1px solid gray;
+            margin-top: -1px;
+        }
+
+        .stair9:hover .span_h1 {
+            background: red;
+        }
+
+        .stair9:hover .span_h1+span::after {
+            content: "";
+            display: inline-block;
+            clear: both;
+            width: 20px;
+            height: 5px;
+            margin-bottom: 5px;
+            margin-left: 5px;
+            border-left: 5px solid #5e6675;
+            border-bottom: 5px solid #5e6675;
+            border-top: 5px solid transparent;
+            border-right: 5px solid transparent;
+            transform: rotate(-45deg);
+        }
+
+        .stair9:hover .span1 {
+            background: yellowgreen;
+        }
+
+        .stair9:hover .span2 {
+            background: burlywood;
+        }
+
+        .stair9:hover .span3 {
+            background: chartreuse;
+        }
+
+        .stair9:hover .span4 {
+            background: rebeccapurple;
+        }
+
+        .stair9:hover .span5 {
+            background: khaki;
+        }
+
+        #footer {
+            margin-top: 250px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .top {
+            overflow: hidden;
+            height: 50px;
+            position: relative;
+            /*border: 1px solid orange;*/
+        }
+
+        footer {
+            width: 1100px;
+            height: 320px;
+            background: #5e6675;
+            position: relative;
+            margin: 250px auto 0 auto;
+            /* border: 1px solid blue; */
+        }
+
+        .top #customer_center {
+            font-weight: 400;
+            font-size: 20px;
+            top: 15px;
+            left: 50px;
+            width: 500px;
+            color: #eaeaea;
+            margin: 25px 20px 0 55px;
+        }
+
+        footer #line_1 {
+            overflow: hidden;
+            margin-top: 30px;
+            background: #eaeaea;
+            /*padding-bottom: 10px;*/
+        }
+
+        #select_footer {
+            position: absolute;
+            top: 30px;
+            right: 32px;
+            /*border: 1px solid skyblue;*/
+        }
+
+        .footer_left {
+            list-style: none;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.8em;
+            width: 550px;
+            display: inline-block;
+            margin-top: 20px;
+            /*border: 1px solid pink;*/
+        }
+
+        .footer_left ul li {
+            margin-left: 55px;
+            list-style: none;
+            color: #eaeaea;
+            /*	border: 1px solid #fff;*/
+        }
+
+        .footer_right {
+            float: left;
+            margin-left: 100px;
+            /*border: 1px solid #fff;*/
+        }
+
+        #bbkjh {
+            width: 450px;
+            float: right;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .box {
+            background: #eaeaea;
+            width: 230px;
+            height: 25px;
+            text-align: left;
+            color: #5e6675;
+            border-radius: 10px;
+            margin: 20px 0 38px 0;
+        }
+
+        .box2 {
+            margin-top: 5px;
+        }
+
+        .box:hover {
+            color: #5e6675;
+            background: #ebdcbf;
+            padding: 2px
+        }
+
+        .box2:hover i {
+            color: #5e6675;
+            font-weight: bolder;
+        }
+
+        .box:hover .fa-blog,
+        .box:hover .fa-calendar-alt {
+            color: #5e6675;
+        }
+
+        .awe {
+            text-align: center;
+            float: right;
+            width: 50px;
+            height: 200px;
+            margin-right: 25px;
+            margin-top: -6px;
+        }
+
+        .cls001 {
+            float: left;
+            padding-left: 20px;
+            line-height: 10px;
+            margin-right: 20px;
+            margin-top: 7px;
+            transition: 0.2s;
+            color: #003458;
+            font-size: 17px;
+        }
+
+        .cls002 {
+            margin-top: 11px;
+        }
+
+        .cls003 {
+            text-indent: -10px;
+        }
+
+        .fa-facebook-square {
+            font-size: 30px;
+            color: #eaeaea;
+            transition: 0.2s;
+        }
+
+        .fa-facebook-square:hover {
+            font-size: 32px;
+            color: #ebdcbf;
+        }
+
+        .fa-instagram-square {
+            font-size: 30px;
+            color: #eaeaea;
+            transition: 0.2s;
+        }
+
+        .fa-instagram-square:hover {
+            font-size: 32px;
+            color: #ebdcbf;
+        }
+
+        .fa-twitter-square {
+            font-size: 30px;
+            color: #eaeaea;
+            transition: 0.2s;
+        }
+
+        .fa-twitter-square:hover {
+            font-size: 32px;
+            color: #ebdcbf;
+        }
+
+        .fa-youtube {
+            font-size: 30px;
+            color: #eaeaea;
+            transition: 0.2s;
+        }
+
+        .fa-youtube:hover {
+            font-size: 32px;
+            color: #ebdcbf;
+        }
+
+        .fa-comments {
+            float: left;
+            color: #5e6675;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#"><img src="data1/images/logo.png" alt=""></a>
+        <input type="search" name="" id="" placeholder="Every Search...">
+        <a href="#"><i class="fas fa-search-location"></i></a>
+        <a href="#" class="header_a"><i class="fas fa-chevron-left"></i> MENU</a>
+        <ul>
+            <li>국내여행</li>
+            <li>해외여행</li>
+            <li>호텔숙박</li>
+            <li>항공권조회</li>
+            <li>Q&A</li>
+        </ul>
+    </header>
+    <section class="sect_we_are">
+        <div class="we_are_wrapper">
+            <div class="we_are_left">
+                <h1>#우리는...</h1>
+                <i class="fab fa-medapps"></i>
+            </div>
+            <div class="we_are_right">
+                <div class="stair1">
+                    <h1><span class="span_h1">우리의 생각</span><span></span></h1>
+                    <p>Lorem <span class="span5">ipsum</span> dolor sit amet <span class="span2">consectetur,</span>
+                        adipisicing elit. Nam doloremque, vero <span class="span4">ipsum</span> perspiciatis
+                        placeat inventore et assumenda <span class="span1">provident</span> rerum sed dolorem <span
+                            class="span3">molestiae</span> alias repellendus quaerat
+                        neque, exercitationem impedit magnam dolores.</p>
+                </div>
+                <div class="stair2">
+                    <h1><span class="span_h1">우리의 비전</span><span></span></h1>
+                    <p>Lorem ipsum <span class="span3">dolor</span> sit amet consectetur, adipisicing elit. Nam <span
+                            class="span3">doloremque,</span> vero ipsum perspiciatis
+                        placeat inventore et assumenda provident rerum sed <span class="span1">dolorem</span> molestiae
+                        alias repellendus quaerat
+                        neque, exercitationem <span class="span2">impedit</span> magnam <span
+                            class="span5">dolores.</span></p>
+                </div>
+                <div class="stair3">
+                    <h1><span class="span_h1">사회 공헌</span><span></span></h1>
+                    <p><span class="span5">Lorem</span> ipsum dolor sit amet consectetur, adipisicing elit. Nam <span
+                            class="span4">doloremque,</span> vero ipsum perspiciatis
+                        <span class="span3">placeat</span> inventore et assumenda provident rerum sed <span
+                            class="span2">dolorem</span>s molestiae alias repellendus <span class="span1">>quaerat</span
+                            neque, exercitationem impedit magnam dolores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="second_part">
+        <div class="second_part_wrapper">
+            <div class="second_part_left">
+                <div class="stair4">
+                    <h1><span class="span_h1">브랜드 평판</span><span></span></h1>
+                    <p>Lorem <span class="span1">ipsum</span> dolor sit amet consectetur, <span
+                            class="span2">adipisicing</span> elit. Nam doloremque, <span class="span3">vero</span> ipsum
+                        perspiciatis
+                        placeat inventore et assumenda provident rerum sed dolorem molestiae alias repellendus quaerat
+                        neque, <span class="span4">exercitationem</span> impedit magnam <span
+                            class="span5">dolores.</span></p>
+                </div>
+                <div class="stair5">
+                    <h1><span class="span_h1">고객 만족도</span><span></span></h1>
+                    <p>Lorem ipsum dolor sit amet consectetur, <span class="span4">adipisicing</span> elit. Nam
+                        doloremque, <span class="span5">vero</span> ipsum perspiciatis
+                        <span class="span1">placeat</span> inventore et assumenda provident rerum <span
+                            class="span2">sed</span> dolorem molestiae alias repellendus quaerat
+                        neque, exercitationem <span class="span3">impedit</span> magnam dolores.
+                    </p>
+                </div>
+                <div class="stair6">
+                    <h1><span class="span_h1">자체 평가</span><span></span></h1>
+                    <p><span class="span4">Lorem</span> ipsum dolor sit amet consectetur, adipisicing elit. <span
+                            class="span1">Nam</span> doloremque, vero ipsum perspiciatis
+                        <span class="span3">placeat</span> inventore et assumenda provident <span
+                            class="span5">rerum</span> sed dolorem molestiae alias repellendus quaerat
+                        neque, <span class="span2">exercitationem</span> impedit magnam dolores.
+                    </p>
+                </div>
+            </div>
+            <div class="second_part_right">
+                <h1>#여행사로서</h1>
+                <i class="fas fa-suitcase-rolling"></i>
+            </div>
+        </div>
+    </section>
+    <section class="third_part">
+        <div class="third_part_wrapper">
+            <div class="third_part_left">
+                <h1>#사람들<br>
+                    #수평적 관계</h1>
+                <i class="fas fa-user-friends"></i>
+            </div>
+            <div class="third_part_right">
+                <div class="stair7">
+                    <h1><span class="span_h1">권수민</span><span></span></h1>
+                    <span class="span3">Lorem</span> ipsum dolor sit amet consectetur, adipisicing elit. <span
+                        class="span1">Nam</span> doloremque, vero ipsum perspiciatis
+                    <span class="span4">placeat</span> inventore et assumenda provident <span class="span2">rerum</span>
+                    sed dolorem molestiae alias repellendus quaerat
+                    neque, <span class="span5">exercitationem</span> impedit magnam dolores.</p>
+                </div>
+                <div class="stair8">
+                    <h1><span class="span_h1">이누리</span><span></span></h1>
+                    <span class="span4">Lorem</span> ipsum dolor sit amet consectetur, adipisicing elit. <span
+                        class="span1">Nam</span> doloremque, vero ipsum perspiciatis
+                    <span class="span3">placeat</span> inventore et assumenda provident <span class="span5">rerum</span>
+                    sed dolorem molestiae alias repellendus quaerat
+                    neque, <span class="span2">exercitationem</span> impedit magnam dolores.</p>
+                </div>
+                <div class="stair9">
+                    <h1><span class="span_h1">이홍주</span><span></span></h1>
+                    <p>Lorem <span class="span5">ipsum</span> dolor sit amet <span class="span2">consectetur,</span>
+                        adipisicing elit. Nam doloremque, vero <span class="span4">ipsum</span> perspiciatis
+                        placeat inventore et assumenda <span class="span1">provident</span> rerum sed dolorem <span
+                            class="span3">molestiae</span> alias repellendus quaerat
+                        neque, exercitationem impedit magnam dolores.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="top">
+            <h1 id="customer_center">고객센터 1500-4444 / 상담문의 1500-1004</h1>
+            <form action="text">
+                <select id="select_footer">
+                    <option>회사소개</option>
+                    <option>여행약관</option>
+                    <option>이용약관</option>
+                    <option>여행보험</option>
+                </select>
+            </form>
+        </div>
+        <hr id="line_1">
+        <div class="footer_left">
+            <ul>
+                <li>대표 : 권수민, 이누리, 이홍주</li>
+                <li>주소 : 경기도 수원시 장안구 장안로</li>
+                <li>사업자 등록번호 : 000-00-0000</li>
+                <li>사업자정보확인</li>
+                <li>팩스 : 00-000-0000</li>
+                <li>이메일 : tmakxmdnpq@naver.com</li>
+                <li>#_부득이한 사정에 의해 여행일정이 변경되는 경우 사전 동의를 받습니다.</li>
+            </ul>
+        </div>
+        <div id="bbkjh">
+            <div class="footer_right">
+                <div class="box box2"><i class="fas fa-comments cls001 cls003"></i>1:1 카톡 상담하기
+                </div>
+                <div class="box"><i class="fas fa-blog cls001"></i>여행 블로그 가기
+                </div>
+                <div class="box"><i class="fas fa-calendar-alt cls001"></i>여행설명회 일정보기
+                </div>
+            </div>
+            <div class="awe">
+                <i class="fab fa-facebook-square cls002"></i>
+                <i class="fab fa-instagram-square cls002"></i>
+                <i class="fab fa-twitter-square cls002"></i>
+                <i class="fab fa-youtube cls002"></i>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

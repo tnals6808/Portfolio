@@ -1,0 +1,568 @@
+@charset "UTF-8";
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-collapse: collapse;
+    font-family: Arial, Helvetica;
+}
+
+body {
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+
+a {
+    text-decoration: none;
+}
+
+#wrapper {
+    width: 100%;
+    min-height: 100%;
+    position: relative;
+    overflow-x: hidden;
+}
+
+#nav {
+    height: 100px;
+    width: 100%;
+    background: transparent;
+    position: relative;
+}
+
+#nav ul {
+    width: 100%;
+    height: 100px;
+}
+
+#nav ul.on {
+    background: #fff;
+    position: fixed;
+    width: 100vw;
+    height: 100px;
+}
+
+#nav li a:hover {
+    color: red;
+    transition: 0.5s;
+}
+
+.navFixed {
+    position: fixed;
+    top: 0;
+    background: #fff;
+}
+
+#nav li {
+    float: left;
+    list-style: none;
+    width: 20%;
+    z-index: 999;
+    position: relative;
+    display: block;
+    text-align: center;
+}
+
+#nav li a {
+    line-height: 100px;
+    height: 100px;
+    color: #fff;
+    font-size: 1.3rem;
+}
+
+#nav li a span {
+    position: relative;
+}
+
+#nav li a span:before {
+    content: attr(data-hover);
+    position: absolute;
+    left: 0;
+    top: 30px;
+    overflow: hidden;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    transition: 0.3s;
+    transform: scaleX(0);
+}
+
+#nav li a span:hover:before {
+    transform: scaleX(1);
+}
+
+#nav ul li:nth-child(3) {
+    position: relative;
+}
+
+#nav .log_box {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+}
+
+#nav .log_box .logo {
+    position: absolute;
+    top: 15%;
+    left: 25%;
+}
+
+#nav .log_box .logo2 {
+    opacity: 0;
+    position: absolute;
+    top: 15%;
+    left: 25%;
+}
+
+#nav .log_box:hover .logo {
+    opacity: 0;
+    z-index: -999;
+    transition: 0.8s;
+}
+
+#nav .log_box:hover .logo2 {
+    opacity: 1;
+    z-index: 999;
+    transition: 0.6s;
+}
+
+#nav .main_video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -999;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+#nav .nav_txt {
+    width: 205px;
+    height: 305px;
+    margin: 47rem 9.5rem;
+    position: fixed;
+}
+
+/* .m_t_aro {
+    position: absolute;
+    width: 200px;
+    height: 40px;
+    top: 160px;
+    left: -180px;
+    border: 1px solid red;
+    transition: 2s;
+    opacity: 1;
+}
+
+.aro {
+    display: inline-block;
+    width: 180px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left:0;
+    opacity: 1;
+} */
+
+#nav .nav_txt #mt_img {
+    width: 200px;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: 0.8s;
+    transition-delay: 1.5s;
+    z-index: 999;
+}
+
+section {
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    padding: 0 0 35rem 0;
+    background: white;
+}
+
+#sec_brand {
+    width: 100%;
+    height: 100%;
+}
+
+.sec_brand_back {
+    background: url(coffee_back.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 952px;
+    z-index: 9999;
+    opacity: 0.8; 
+}
+
+section #sec_brand h1 {
+    color: #fff;
+    font-size: 5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    top: 10%;
+    left: 28%;
+    line-height: 1.5;
+    /* display: block; */ 
+}
+
+section #sec_brand h1,
+section #sec_brand h1 span {
+    /* color: rgba(255, 255, 255, 0.2);  */
+    color: rgba(255, 255, 255, 0.267);
+    background-size: 102% 100%; 
+    background-position: left 0px bottom -40px;
+    background-repeat: repeat-x;
+    -webkit-background-clip: text; 
+    -moz-background-clip: text; 
+    background-clip: text;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 90 240 300' preserveAspectRatio='none'%3E%3Crect x='0' y='0' width='500' height='800' style='stroke: none; fill: rgb(255,255,255);' /%3E%3Cpath d='M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z' style='stroke: none;'%3E%3C/path%3E%3C/svg%3E");
+    animation: wave 3s both linear;
+    cursor: pointer;
+}
+
+@keyframes wave {
+    0% {
+        background-position: left 0px bottom -80px;
+    }
+    100% { 
+        background-position: left 1500px bottom 20px;
+    }
+}
+
+section #sec_brand h1:hover,
+section #sec_brand h1:hover span {
+    transition: 0.8s;
+}
+
+section #sec_brand h1 span {
+    font-size: 8rem;
+}
+
+section #sec_brand .sec_brandBox {
+    width: 150px;
+    height: 50px;
+    border: 1.5px solid #fff;
+    position: absolute;
+    top: 16%;
+    left: 57%;
+    background: none;
+}
+
+section #sec_brand .sec_brandBox a {
+    font-size: 1.2rem;
+    color: #fff; 
+    font-weight: 600;
+}
+
+section #sec_brand .sec_brandBox:hover {
+    background: #fff;
+    opacity: 0.5;
+    transition: 0.6s;
+    border-radius: 1rem;
+}
+
+section #sec_brand .sec_brandBox:hover > a {
+    color: rgb(46, 16, 16);
+
+    opacity: 1;
+    transition: 0.6s;
+}
+
+section #sec_brand h2 {
+    font-size: 4rem;
+    color: #3a3a3a;
+    text-align: center;
+    margin: 23rem 0 0 0;
+}
+
+section #sec_brand article {
+    padding: 5rem 0 0 0;
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+section #sec_brand .secProduct {
+    cursor: pointer;
+}
+
+.secBox1 {
+    background: url(Americano.png) no-repeat center;
+}
+
+.secBox2 {
+    background: url(Latte.png) no-repeat center;
+}
+
+.secBox3 {
+    background: url(Decaffeinated.png) no-repeat center;
+}
+
+.secBox4 {
+    background: url(Signature.png) no-repeat center;
+}
+
+.secBox1,.secBox2,.secBox3,.secBox4,.secBox5 {
+    margin: 1rem;
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.5rem #f1f1f1; 
+}
+
+section #sec_brand article .sec_txt {
+    display: block; 
+    text-align: center ;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #3a3a3a;
+}
+
+section #sec_brand .secProduct:hover .sec_txt {
+    font-size: 1.3rem;
+    transition: 0.6s;
+}
+
+::selection {
+    background: red;
+  }
+
+  .shape1,
+  .shape2 {
+    stroke-dasharray: 2000;
+    stroke-width: 3px;
+    fill: transparent;
+    stroke: red;
+    transition-timing-function: linear;
+    transition: stroke-dashoffset 1.5s, stroke-dasharray 1.5s;
+  }
+
+  .shape1 {
+    stroke-dashoffset: 2000;
+  }
+
+  .shape2 {
+    stroke-dashoffset: -2000;
+  }
+
+  .secProduct:hover .shape1,
+  .secProduct:hover .shape2 {
+    stroke-dashoffset: 0;
+    stroke-dasharray: 2000;
+  }
+
+#sec_brand h3 {
+    font-size: 4rem;
+    color: #3a3a3a;
+    text-align: center;
+    margin: 23rem 0 0 0;
+}
+
+#slide {
+    padding: 5rem 0 0 0;
+}
+
+.VideoBox {
+    margin: 0 auto;
+    overflow: hidden;
+    display: flex;
+}
+
+.VideoBox .Play {
+    width: 45%;
+}
+
+.VideoBox .Play iframe {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+#wrappar footer {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: #3a3a3a;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+} 
+
+.footerBox {
+    width: 1200px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+.footerBox ul {
+    padding: 2rem 0;
+}
+
+.footerBox ul .Fline {
+    width: 2px;
+    height: 10px;
+    display: inline-block;
+    background: #fff;
+    margin: 0.4rem 0;
+    float: left;
+}
+
+.footerBox ul .Fselect {
+    padding: 0 0 0 21rem;
+    display: inline ;
+}
+
+.footerBox ul li {
+    list-style: none;
+    color: #fff;
+    float: left;
+    padding: 0 1rem;
+    font-size: 0.8rem;
+}
+
+.footerBox ul li:first-child {
+    color: red;
+}
+
+.footerBox p {
+    padding: 0.5rem 1rem;
+    color: #fff;
+    font-size: 0.8rem;
+}
+
+.footerBox .Funder {
+    padding: 1rem 0 0 0;
+    overflow: hidden;
+}
+
+@media (max-width: 2000px) {
+    #nav .nav_txt {
+    margin: 45rem 8rem;
+    }
+    #nav .log_box .logo,
+    #nav .log_box .logo2,
+    #nav .log_box:hover .logo,
+    #nav .log_box:hover .logo2 {
+        width: 170px;
+    }
+    section #sec_brand h1 {
+        font-size: 4rem;
+    }
+    section #sec_brand h1 span {
+        font-size: 6rem;
+        
+    }
+    section #sec_brand .sec_brandBox {
+        top: 14%;
+        left: 50%;
+    }
+}
+
+@media (max-width: 1600px) {
+    #nav .log_box {
+        left: 44.5%;
+    }
+    #nav .log_box .logo,
+    #nav .log_box .logo2,
+    #nav .log_box:hover .logo,
+    #nav .log_box:hover .logo2 {
+        width: 150px;
+    }
+    section #sec_brand h1 {
+        font-size: 3rem;
+    }
+    section #sec_brand h1 span {
+        font-size: 5rem;
+        
+    }
+    section #sec_brand .sec_brandBox {
+        top: 13%;
+        left: 55%;
+        width: 100px;
+        height: 40px;
+    }
+    section #sec_brand .sec_brandBox a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    #nav .log_box {
+        left: 44%;
+    }
+    #nav .log_box .logo,
+    #nav .log_box .logo2,
+    #nav .log_box:hover .logo,
+    #nav .log_box:hover .logo2 {
+        width: 130px;
+        height: 43px;
+    }
+    #nav li a {
+        font-size: 1rem;
+    }
+    section #sec_brand .sec_brandBox {
+        top: 13.5%;
+        left: 63%;
+    }
+    .footerBox {
+        width: 1000px;
+    }
+    .footerBox ul .Fselect {
+        padding: 0 0 0 8rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    #nav .log_box {
+        left: 43%;
+    }
+    #nav .log_box .logo,
+    #nav .log_box .logo2,
+    #nav .log_box:hover .logo,
+    #nav .log_box:hover .logo2 {
+        width: 100px;
+        height: 35px;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    #nav .nav_txt {
+    margin: 35rem 7rem;
+    }
+    #nav .log_box {
+        left: 44%;
+    }
+    #nav .log_box .logo,
+    #nav .log_box .logo2,
+    #nav .log_box:hover .logo,
+    #nav .log_box:hover .logo2 {
+        width: 85px;
+        height: 30px;
+    }
+    #nav li a {
+        font-size: 0.8rem;
+    }
+    section #sec_brand h1 {
+        font-size: 2rem;
+    }
+    section #sec_brand h1 span {
+        font-size: 4rem;
+        
+    }
+    section #sec_brand .sec_brandBox {
+        top: 12%;
+        left: 60%;
+    }
+}

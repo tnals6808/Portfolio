@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="kanu.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="kanu.scss"> -->
+    <script type="text/javascript" src="kanu.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <title>KANU</title>
+</head>
+
+<body>
+    <div id="wrappar">
+        <div id="fix_btn">
+            <span></span>
+        </div>
+        <div id="nav">
+            <ul>
+                <li><a href="#"><span>HOME</span></a></li>
+                <li><a href="#"><span>BRAND</span></a></li>
+                <li>
+                    <a href="#" class="log_box">
+                        <img src="kanu_logo_3_2_wh.png" alt="로고" class="logo">
+                        <img src="kanu_logo_3_2.png" alt="로고" class="logo2">
+                    </a>
+                </li>
+                <li><a href="#"><span>PRODUCT</span></a></li>
+                <li><a href="#"><span>EVENT</span></a></li>
+            </ul>
+            <div class="nav_txt">
+                <!-- <img src="Americano.png" alt="아메리카노" id="mt_img" class="mt_img1">
+                <img src="Latte2.png" alt="라떼" id="mt_img" class="mt_img2">
+                <img src="Mint chocolate latte2.png" alt="민트 초코 라떼" id="mt_img" class="mt_img3">
+                <img src="Decaffeinated2.png" alt="디카페인" id="mt_img" class="mt_img4">
+                <img src="Signature2.png" alt="시그니처" id="mt_img" class="mt_img5"> -->
+                <!-- <div class="m_t_aro">
+                    <img src="arrow.png" alt="" class="aro">
+                </div> -->
+            </div>
+            <video src="kanu.mp4" autoplay muted loop class="main_video"></video>
+        </div>
+        <section>
+            <div id="sec_brand">
+                <div class="sec_brand_back">
+                    <a href="#">
+                        <h1>"세상에서 가장 작은 카페"<br>
+                            <span>KANU</span>
+                        </h1>
+                        <button class="sec_brandBox"><a>MORE</a></button>
+                    </a>
+                </div>
+                <h2>BEST</h2>
+                <article>
+                    <div class="secProduct">
+                        <svg height="600" width="400" xmlns="http://www.w3.org/2000/svg" class="secBox1">
+                            <rect class="shape1" height="600" width="400"/>
+                            <rect class="shape2" height="600" width="400"/>
+                        </svg>
+                        <span class="sec_txt text">맥심 카누 아메리카노</span>
+                    </div>
+
+                    <div class="secProduct">
+                        <svg height="600" width="400" xmlns="http://www.w3.org/2000/svg" class="secBox2">
+                            <rect class="shape1" height="600" width="400"/>
+                            <rect class="shape2" height="600" width="400"/>
+                        </svg>
+                        <span class="sec_txt">맥심 카누라떼</span>
+                    </div>
+
+                    <div class="secProduct">
+                        <svg height="600" width="400" xmlns="http://www.w3.org/2000/svg" class="secBox3">
+                            <rect class="shape1" height="600" width="400"/>
+                            <rect class="shape2" height="600" width="400"/>
+                        </svg>
+                        <span class="sec_txt">맥심 디카페인</span>
+                    </div>
+
+                    <div class="secProduct">
+                        <svg height="600" width="400" xmlns="http://www.w3.org/2000/svg" class="secBox4">
+                            <rect class="shape1" height="600" width="400"/>
+                            <rect class="shape2" height="600" width="400"/>
+                        </svg>
+                        <span class="sec_txt">맥심 시그니처</span>
+                    </div>
+                </article>
+                <!-- <p>
+                    맥심 카누는 에스프레소 추출로 얻어낸 고품질 커피 파우더에 직접 갈아 넣은 원두를 맥심이 찾아낸 최적의 비율로 블렌딩하여 더욱 조화롭고 깊은 카페 아메리카노 본연의 맛과 향을
+                    제공합니다.
+                    원두커피의 퀄리티에 편리함을 더해 언제 어디서나 막 뽑아낸 듯 한 신선한 맥심 카누를 즐겨 보세요.
+                    나만을 위해 준비된 작은 카페에서의 여유롭고 행복한 순간이 찾아옵니다.
+                </p> -->
+                <h3>TV CF</h3>
+
+                <div id="slide" v-cloak>
+                        <div class="VideoBox">
+                            <div class="Play exbox">
+                                <iframe src="https://www.youtube.com/embed/CW-5DnoLhAE" title="[맥심 카누] 카누 SPRING 편 30초 (공유) -180307" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+        
+                            <div class="Play exbox">
+                                <iframe src="https://www.youtube.com/embed/pMPnmIM78h8" title="[맥심 카누] 카누 심야카페 편 15초 (공유, 크러쉬) -190420" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+        
+                            <div class="Play exbox">
+                                <iframe src="https://www.youtube.com/embed/5HZ0jmxgJlQ" title="[맥심 카누] 카누 런치카페 편 15초 (공유, 윤소희) -190423" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+        
+                            <div class="Play exbox">
+                                <iframe src="https://www.youtube.com/embed/7pPJagVoD0U" title="[맥심 카누] 카누 모닝카페 편 30초 (공유, 박유나) -190420" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+        
+                            <div class="Play exbox">
+                                <iframe src="https://www.youtube.com/embed/RLOix7KwBe8" title="[KANU] 아메리카노를 사랑하는 당신에게, 카누 라이트 로스트" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+        
+                            <div class="Play exbox">
+                                <iframe src="https://www.youtube.com/embed/5vRTjXlIyKk" title="KANU 트리플샷 라떼" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+        
+                            <div class="Play exbox">
+                                <iframe src="https://www.youtube.com/embed/XoAd6BbE_eg" title="KANU 너티카라멜라떼" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+        
+                            <div class="Play exbox">
+                                <iframe src="https://www.youtube.com/embed/Jp_xSGreeo0" title="[KANU] 세상에서 가장 작은 라떼 맛집, 카누 (15")" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+        
+                            <!-- <div class="Play exbox">
+                                <iframe src="https://www.youtube.com/embed/dhGfRFbNLjo" title="[KANU] 세상에서 가장 작은 라떼 맛집, 카누 (30")" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                             -->
+                        </div>
+                </div>
+            </div>
+
+            <footer>
+                <div class="footerBox">
+                    <ul>
+                        <li>개인정보처리방침</li>
+                        <div class="Fline"></div>
+                        <li>이용약관</li>
+                        <div class="Fline"></div>
+                        <li>영상정보처리기기운영관리방침</li>
+                        <div class="Fselect">
+                            <select name="브랜드사이트" id="Fbrand">
+                                <option value="브랜드사이트">브랜드사이트</option>
+                                <option value="카누">카누</option>
+                                <option value="포스트">포스트</option>
+                            </select>
+                            <select name="패밀리사이트" id="Fcompany">
+                                <option value="패밀리사이트">패밀리사이트</option>
+                                <option value="삶의향기 동서문학상">삶의향기 동서문학상</option>
+                                <option value="(주)동서">(주)동서</option>
+                            </select>
+                            <select name="커뮤니티" id="Fcommunity">
+                                <option value="커뮤니티">커뮤니티</option>
+                                <option value="동서문학회 커뮤니티">동서문학회 커뮤니티</option>
+                                <option value="그녀들의 커피이야기">그녀들의 커피이야기</option>
+                            </select>
+                        </div>
+                    </ul>
+                    <div class="Funder">
+                        <p>[부평공장] 인천시 부평구 000 00 / [서울사무소] 서울시 마포구 000 000</p>
+                        <p>대표번호 : 1588-0000 / 고객상담실 : 080-023-0000</p>
+                        <p>Copyright2017Dongsuh Foods Corporation. All rights reserved.</p>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </div>
+</body>
+</html>
